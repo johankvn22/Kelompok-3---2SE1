@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Starwars Cafe</h1>
+        <ul>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+
+
+    <div class="col-12 title">
+        <h2>WELCOME TO STARWARS CAFE</h2>
+    </div>
+
+    <div>
+        <img class="mySlides" src="img/starbuck .jpg" alt="slider">
+        <img class="mySlides" src="img/Allmenu.jpg" alt="slider">
+        <img class="mySlides" src="img/Ruangancafe2.jpg" alt="slider">
+    </div>
+
+
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <small>Copyright &copy; 2022 - STARSWARSCAFE. All Rights Reserved.</small>
+        </div>
+    </footer>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 3000); // Change image every 2 seconds
+        }
+    </script>
+
+</body>
+
+</html>
